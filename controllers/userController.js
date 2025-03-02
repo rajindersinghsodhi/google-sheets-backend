@@ -1,6 +1,6 @@
-import User from '../models/userModel.js';
+const User = require('../models/userModel.js')
 
-export const getUsers = async (req, res) => {
+const getUsers = async (req, res) => {
     try {
         const users = await User.find({});
         res.json(users);
@@ -8,3 +8,5 @@ export const getUsers = async (req, res) => {
         res.status(500).json({ message: 'Server Error', error: error.message });
     }
 };
+
+module.exports = { getUsers };

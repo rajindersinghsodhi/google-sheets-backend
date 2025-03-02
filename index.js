@@ -1,9 +1,10 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import connectDB from './config/db.js';
-import userRoutes from './routes/userRoutes.js';
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const connectDB = require('./config/db.js');
+const bodyParser = require('body-parser');
+const userRoutes = require('./routes/userRoutes.js');
+
 
 dotenv.config();
 connectDB(); // Connect to MongoDB
